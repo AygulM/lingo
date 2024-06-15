@@ -1,0 +1,417 @@
+
+/*      STYLE 1*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a,
+button {
+  cursor: revert;
+  
+  text-decoration: none;
+}
+
+ol,
+ul,
+menu {
+  list-style: none;
+}
+.section__wrapper{
+    max-width: 1200px;
+    margin: 0 auto;
+    border: 1px solid #000;
+}
+.section__title{
+    text-align: center;
+}
+/* Стили для бургер-меню */
+
+.navbar {
+  
+  height: 66px;
+}
+
+.navbar__container {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.navbar__hamb {
+  display: none;
+}
+
+.popup {
+  display: none;
+}
+
+.navbar__logo {
+  text-decoration: none;
+  /* color: #fff; */
+  font-size: 20px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  letter-spacing: 2px;
+}
+
+.navbar__menu > li > a {
+  text-decoration: none;
+}
+
+.navbar__menu {
+  display: flex;
+}
+
+.navbar__menu > li {
+  display: flex;
+  align-items: stretch;
+}
+
+.navbar__menu > li > a {
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  /* color: rgba(255, 255, 255, 0.7); */
+}
+
+/* .navbar__menu > li > a:hover {
+  color: rgba(255, 255, 255, 1);
+} */
+
+.navbar__hamb-field {
+  cursor: pointer;
+  padding: 5px;
+}
+.navbar__hamb-bar {
+  display: block;
+  width: 30px;
+  height: 2px;
+  margin: 6px auto;
+  background-color: #000000;
+  transition: 0.2s;
+  line-height: 1;
+}
+.popup {
+  padding-top: 86px;
+  padding-bottom: 30px;
+  position: fixed;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  /* background-color: #fff; */
+  z-index: 10;
+  display: block;
+  transition: 0.3s;
+  overflow-y: auto;
+}
+.popup.open {
+  left: 0;
+}
+.popup__menu {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+}
+.popup__menu > li {
+  width: 100%;
+}
+.popup__menu > li > a {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+  font-size: 20px;
+  font-weight: bold;
+  color: #222;
+}
+.navbar__hamb-field.active .navbar__hamb-bar:nth-child(2) {
+  opacity: 0;
+}
+.navbar__hamb-field.active .navbar__hamb-bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.navbar__hamb-field.active .navbar__hamb-bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+.noscroll {
+  overflow: hidden;
+}
+
+@media (max-width: 800px) {
+  .navbar__logo {
+    padding: 0 10px;
+  }
+  .navbar__menu {
+    display: none;
+  }
+  .navbar__hamb {
+    display: flex;
+    align-items: center;
+  }
+}
+
+/* -------------TEACHER-----    */
+.teacher__item{
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+                
+    border-radius: 5px;
+}
+.teachers__block{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;/**/
+    margin-top: 50px;
+    margin-bottom: 50px;
+/* 
+    border: 1px solid #1e5861;      */       
+}
+.teacher__contain{
+    padding: 20px;
+    padding-bottom: 50px;
+                /* 
+                    border: 1px solid #d31212; */
+}
+.teacher__info{
+    padding: 10px;
+    height: 150px;
+}
+.teacher__image{
+    width: 160px;
+    height: 160px;
+    margin-top: -40px;
+}
+.teacher__img{
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    /* border: 4px solid #6c1553; */
+    background-size: cover;
+}
+.teacher__lang{
+    margin-top: -45px;
+    margin-left: 120px;
+}
+.teacher__name{
+    padding-bottom: 10px;
+}
+
+
+/*   course   */
+
+.courses__block{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;/**/
+    /* border: 1px solid #a53f3f; */
+}
+.course__item{
+    width: 31%;
+    border: 1px solid #000;
+    margin-bottom: 20px;
+    border-radius: 30px;
+}
+.course__information, .course__details{
+    padding: 25px;
+}
+.course__child{
+    margin-bottom: 10px;
+}
+.course__information:last-child(){
+    margin-bottom: 0;
+}
+.course__image{
+    height: 180px;
+    background-size: cover;
+    background-position: center;    
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+.course__information{
+    display: flex;
+    flex-direction: column;
+}
+.course__di{
+    width: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: #959595;
+}
+
+.course__author{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.course__author--img{
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+.img__author{
+    width: 40px;
+    height: 40px;
+    background-position: center;
+    background-size: contain;
+    
+    border-radius: 50%;
+}
+/* .course__author--img img{
+    width: 40px;
+    height: 40px;
+} */
+.course__details{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* border-top: 1px solid #000; */
+}
+
+
+/*----------Teacher detail----------*/
+.teacher__profile{
+    padding-top: 25px;
+}
+.tp__head{
+    width: 90%;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    border-radius: 25px;
+    /* border: 1px solid #d044a8; */
+    padding: 25px;
+    margin-bottom: 30px;
+}
+
+.tp__photo{
+    width: 120px;
+    height: 120px;    
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+}
+.tp__name{
+    padding-top: 20px;
+    font-size: 30px;
+}
+
+
+
+.tp__container{
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+/* .container {
+    border: 1px solid #dee2e6;
+    border-radius: 0.375rem;
+    border: 1px solid #000;
+  } */
+
+.tab {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.tab > input[type="radio"] {
+  display: none;
+}
+
+.tab-content {
+  display: none;
+  width: 100%;
+  margin-top: 1rem;/**/
+}
+
+#tab-btn-1:checked~#content-1,
+#tab-btn-2:checked~#content-2,
+#tab-btn-3:checked~#content-3 {
+  display: block;
+}
+
+.tab > label {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  cursor: pointer;
+  transition: color .15s ease-in-out, border-color .15s ease-in-out;
+  color: #0d6efd;
+  background: 0 0;
+  border-bottom: 0.125rem solid transparent;
+}
+
+.tab > label:hover {
+  border-bottom-color: #0d6efd;
+}
+
+.tab > input[type="radio"]:checked + label {
+  cursor: default;
+  font-weight: bold;
+  color: #0856cc;
+  border-bottom-color: #0d6efd;
+}
+
+
+
+    /* Course detail  */
+
+    .course__detail{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .cd__rigth{
+        /* border: 1px solid #3821aa; */
+        padding: 20px;
+        margin-right: 30px;
+    }
+    .cd__left{
+        width: 400px;
+        padding: 20px;
+        /* border: 1px solid #000; */
+    }
+
+    .cd__discription{
+        border: 1px solid #000;
+    }
+    /* .cd__lessons{
+        border: 1px solid #626868;
+    } */
+
+    /* -----------Tests table?--------------------*/
+
+
+    .table {
+      width: 100%;
+      border: none;
+      margin-bottom: 20px;
+    }
+    .table thead th {
+      padding: 10px;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 20px;
+      text-align: left;
+      color: #444441;
+      border-top: 2px solid #716561;
+      border-bottom: 2px solid #716561;
+    }
+    .table tbody td {
+      padding: 10px;
+      font-size: 14px;
+      line-height: 20px;
+      color: #444441;
+      border-top: 1px solid #716561;
+    }
